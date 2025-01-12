@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  fastapi-app:
+    # image: fastapi-app
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3010:8000"
+    volumes:
+      - .:/app
+    restart: always
